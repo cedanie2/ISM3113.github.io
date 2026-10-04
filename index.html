@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Motors | Find Your Next Car</title>
+    <meta
+        name="description"
+        content="Velocity Motors offers premium used and new cars with transparent pricing, financing support, and fast delivery."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="topbar">
+                <div class="brand">
+                    <span class="brand-mark">VM</span>
+                    <div>
+                        <p class="brand-name">Velocity Motors</p>
+                        <p class="brand-copy">Modern car buying, without the dealership drag.</p>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#inventory">Inventory</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#financing">Financing</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+
+            <div class="hero-grid">
+                <section class="hero-copy">
+                    <p class="eyebrow">Curated cars. Clear pricing. Fast delivery.</p>
+                    <h1>Drive home in a car that feels selected, not settled for.</h1>
+                    <p class="hero-text">
+                        Shop sport sedans, electric SUVs, family crossovers, and weekend-ready coupes from a catalog built for real drivers.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#inventory">Browse inventory</a>
+                        <a class="button button-secondary" href="#contact">Book a test drive</a>
+                    </div>
+                    <dl class="hero-stats">
+                        <div>
+                            <dt>480+</dt>
+                            <dd>Cars available this week</dd>
+                        </div>
+                        <div>
+                            <dt>4.9/5</dt>
+                            <dd>Average customer rating</dd>
+                        </div>
+                        <div>
+                            <dt>24 hrs</dt>
+                            <dd>Average approval timeline</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <aside class="hero-card">
+                    <div class="spotlight-card">
+                        <p class="spotlight-label">Featured arrival</p>
+                        <h2>2026 Polestar 3 Performance</h2>
+                        <p class="spotlight-price">$68,900</p>
+                        <ul class="spotlight-specs">
+                            <li>517 hp dual-motor AWD</li>
+                            <li>Certified, 1,140 miles</li>
+                            <li>EPA-est. 279 mile range</li>
+                        </ul>
+                        <div class="spotlight-pill-row">
+                            <span>Instant financing</span>
+                            <span>Nationwide shipping</span>
+                            <span>7-day return window</span>
+                        </div>
+                    </div>
+                    <div class="hero-accent hero-accent-one"></div>
+                    <div class="hero-accent hero-accent-two"></div>
+                </aside>
+            </div>
+        </header>
+
+        <main>
+            <section class="feature-strip" aria-label="Value propositions">
+                <article>
+                    <h3>Inspection first</h3>
+                    <p>Every vehicle passes a 172-point inspection and arrives with digital service history.</p>
+                </article>
+                <article>
+                    <h3>Trade-in clarity</h3>
+                    <p>Live market valuation and same-day offers remove the usual back-and-forth.</p>
+                </article>
+                <article>
+                    <h3>Finance with confidence</h3>
+                    <p>Compare lenders, adjust terms, and estimate payments before you talk to anyone.</p>
+                </article>
+            </section>
+
+            <section class="inventory-section" id="inventory">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Inventory highlights</p>
+                        <h2>Cars for different kinds of drivers</h2>
+                    </div>
+                    <div class="filter-group" role="group" aria-label="Filter inventory cards">
+                        <button class="filter-button is-active" data-filter="all">All</button>
+                        <button class="filter-button" data-filter="electric">Electric</button>
+                        <button class="filter-button" data-filter="family">Family</button>
+                        <button class="filter-button" data-filter="performance">Performance</button>
+                    </div>
+                </div>
+
+                <div class="inventory-grid">
+                    <article class="car-card" data-category="electric">
+                        <div class="car-card-art car-card-art-one"></div>
+                        <div class="car-card-copy">
+                            <p class="car-tag">Electric SUV</p>
+                            <h3>Lucid Gravity Touring</h3>
+                            <p class="car-price">$79,400</p>
+                            <p>Three-row luxury, rapid charging, and enough range for school runs or road trips.</p>
+                            <ul>
+                                <li>450 miles est. range</li>
+                                <li>AWD</li>
+                                <li>6 seats</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="car-card" data-category="performance">
+                        <div class="car-card-art car-card-art-two"></div>
+                        <div class="car-card-copy">
+                            <p class="car-tag">Sport Sedan</p>
+                            <h3>BMW M3 Competition xDrive</h3>
+                            <p class="car-price">$74,900</p>
+                            <p>Track-capable pace with everyday comfort, adaptive suspension, and sharp cabin tech.</p>
+                            <ul>
+                                <li>503 hp</li>
+                                <li>0-60 in 3.4s</li>
+                                <li>AWD</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="car-card" data-category="family">
+                        <div class="car-card-art car-card-art-three"></div>
+                        <div class="car-card-copy">
+                            <p class="car-tag">Family Hybrid</p>
+                            <h3>Toyota Grand Highlander Hybrid Max</h3>
+                            <p class="car-price">$58,200</p>
+                            <p>Spacious, efficient, and built for families who still want power on demand.</p>
+                            <ul>
+                                <li>362 net hp</li>
+                                <li>7 seats</li>
+                                <li>Advanced safety suite</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="car-card" data-category="electric performance">
+                        <div class="car-card-art car-card-art-four"></div>
+                        <div class="car-card-copy">
+                            <p class="car-tag">Electric Performance</p>
+                            <h3>Porsche Taycan 4S</h3>
+                            <p class="car-price">$92,500</p>
+                            <p>Elegant, fast, and refined, with a cabin that feels engineered around the driver.</p>
+                            <ul>
+                                <li>590 hp overboost</li>
+                                <li>800V charging</li>
+                                <li>Adaptive air suspension</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="why-us-section" id="why-us">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Why Velocity</p>
+                        <h2>Built for people who want less friction and better cars</h2>
+                    </div>
+                </div>
+
+                <div class="why-us-grid">
+                    <article class="why-us-card">
+                        <h3>No hidden fees</h3>
+                        <p>The price you see includes inspection, detailing, and document prep. No late-stage surprises.</p>
+                    </article>
+                    <article class="why-us-card">
+                        <h3>Remote purchase support</h3>
+                        <p>Buy online, get a live video walkaround, and sign securely from anywhere in the country.</p>
+                    </article>
+                    <article class="why-us-card">
+                        <h3>Real experts</h3>
+                        <p>Talk to specialists who know trims, battery health, lease returns, and ownership costs.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="finance-section" id="financing">
+                <div class="finance-copy">
+                    <p class="eyebrow">Financing</p>
+                    <h2>Estimate your monthly payment before you commit</h2>
+                    <p>
+                        Use the quick estimator to preview a likely monthly payment. It is a simple planning tool, not a credit decision.
+                    </p>
+                </div>
+
+                <div class="finance-calculator">
+                    <label>
+                        Vehicle price
+                        <input id="price" type="number" min="5000" step="100" value="68900">
+                    </label>
+                    <label>
+                        Down payment
+                        <input id="down-payment" type="number" min="0" step="100" value="7500">
+                    </label>
+                    <label>
+                        Loan term
+                        <select id="term">
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60" selected>60 months</option>
+                            <option value="72">72 months</option>
+                        </select>
+                    </label>
+                    <label>
+                        APR
+                        <input id="apr" type="number" min="0" max="20" step="0.1" value="5.9">
+                    </label>
+
+                    <div class="payment-output">
+                        <p>Estimated monthly payment</p>
+                        <strong id="payment-result">$0 / month</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact">
+                <div>
+                    <p class="eyebrow">Get started</p>
+                    <h2>Tell us what you want to drive next</h2>
+                    <p>Leave your details and a specialist will reach out with matching inventory, finance options, and a test drive schedule.</p>
+                </div>
+
+                <form class="contact-form">
+                    <label>
+                        Full name
+                        <input type="text" name="name" placeholder="Jordan Lee">
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="jordan@example.com">
+                    </label>
+                    <label>
+                        Interested in
+                        <input type="text" name="vehicle" placeholder="Electric SUV, sport sedan, hybrid family car">
+                    </label>
+                    <label>
+                        Notes
+                        <textarea name="notes" rows="4" placeholder="Budget, preferred brands, trade-in details"></textarea>
+                    </label>
+                    <button class="button button-primary" type="submit">Request consultation</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

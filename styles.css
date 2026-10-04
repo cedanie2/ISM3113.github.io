@@ -1,0 +1,623 @@
+:root {
+    --bg: #f7f2ea;
+    --surface: rgba(255, 255, 255, 0.7);
+    --surface-strong: #fffaf4;
+    --text: #211a17;
+    --muted: #665852;
+    --accent: #cf5c36;
+    --accent-dark: #8f3417;
+    --line: rgba(33, 26, 23, 0.12);
+    --shadow: 0 24px 70px rgba(68, 34, 20, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(207, 92, 54, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(17, 124, 122, 0.16), transparent 22%),
+        linear-gradient(180deg, #f0e6d9 0%, var(--bg) 36%, #f9f4ee 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.page-shell {
+    width: min(1180px, calc(100% - 32px));
+    margin: 20px auto 48px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 32px;
+    background: rgba(255, 250, 244, 0.72);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+}
+
+.topbar,
+.hero-grid,
+.section-heading,
+.feature-strip,
+.inventory-grid,
+.why-us-grid,
+.finance-section,
+.contact-section {
+    display: grid;
+    gap: 24px;
+}
+
+.topbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.brand-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #ed8a3c);
+    box-shadow: 0 12px 28px rgba(207, 92, 54, 0.28);
+}
+
+.brand-name,
+.brand-copy,
+.eyebrow,
+.hero-text,
+.spotlight-label,
+.spotlight-price,
+.car-tag,
+.car-price,
+.payment-output p {
+    margin: 0;
+}
+
+.brand-name {
+    font-weight: 700;
+}
+
+.brand-copy,
+.hero-text,
+.feature-strip p,
+.car-card-copy p,
+.why-us-card p,
+.finance-copy p,
+.contact-section p,
+.contact-form label,
+.spotlight-specs,
+.spotlight-pill-row,
+.payment-output p {
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.hero-grid {
+    grid-template-columns: 1.25fr 0.95fr;
+    margin-top: 52px;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+}
+
+.hero-copy h1,
+.section-heading h2,
+.finance-copy h2,
+.contact-section h2,
+.spotlight-card h2 {
+    margin: 12px 0;
+    line-height: 0.96;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.finance-copy h2,
+.contact-section h2 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+}
+
+.hero-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(3.2rem, 8vw, 6.2rem);
+}
+
+.hero-text {
+    max-width: 56ch;
+    font-size: 1.02rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 28px 0;
+}
+
+.button,
+.filter-button {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+.button {
+    padding: 14px 22px;
+    font-weight: 700;
+}
+
+.button:hover,
+.button:focus-visible,
+.filter-button:hover,
+.filter-button:focus-visible {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+    box-shadow: 0 16px 30px rgba(207, 92, 54, 0.24);
+}
+
+.button-secondary,
+.filter-button {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: var(--line);
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0;
+}
+
+.hero-stats div,
+.car-card,
+.why-us-card,
+.finance-calculator,
+.contact-form,
+.feature-strip article {
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+}
+
+.hero-stats dt {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.hero-stats dd {
+    margin: 4px 0 0;
+    color: var(--muted);
+}
+
+.hero-card {
+    position: relative;
+    min-height: 500px;
+}
+
+.spotlight-card {
+    position: relative;
+    z-index: 2;
+    margin: 48px 24px 0 auto;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #201815 0%, #322621 100%);
+    color: #f8f4f0;
+    box-shadow: 0 24px 60px rgba(21, 10, 6, 0.3);
+}
+
+.spotlight-card h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.spotlight-label,
+.spotlight-price {
+    color: #e7cbb8;
+}
+
+.spotlight-price {
+    margin-top: 18px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.spotlight-specs {
+    padding-left: 18px;
+}
+
+.spotlight-pill-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.spotlight-pill-row span {
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4e6db;
+}
+
+.hero-accent {
+    position: absolute;
+    border-radius: 28px;
+    filter: blur(0.1px);
+}
+
+.hero-accent-one {
+    inset: 30px 60px auto 20px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(17, 124, 122, 0.92), rgba(106, 210, 194, 0.78));
+    transform: rotate(-8deg);
+}
+
+.hero-accent-two {
+    inset: auto 0 10px 100px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(238, 142, 63, 0.75), rgba(207, 92, 54, 0.72));
+    transform: rotate(10deg);
+}
+
+main {
+    display: grid;
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.feature-strip,
+.finance-section,
+.contact-section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-strip article,
+.finance-copy,
+.contact-section > div {
+    padding: 22px;
+}
+
+.inventory-section,
+.why-us-section {
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 32px;
+    background: rgba(255, 250, 244, 0.78);
+    box-shadow: var(--shadow);
+}
+
+.section-heading {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    margin-bottom: 24px;
+}
+
+.section-heading h2,
+.finance-copy h2,
+.contact-section h2 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+.filter-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 12px 16px;
+}
+
+.filter-button.is-active {
+    background: var(--text);
+    color: #fff;
+    border-color: var(--text);
+}
+
+.inventory-grid,
+.why-us-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.car-card {
+    display: grid;
+    gap: 18px;
+    overflow: hidden;
+}
+
+.car-card-art {
+    min-height: 210px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.car-card-art-one {
+    background:
+        linear-gradient(180deg, rgba(31, 39, 54, 0.08), rgba(31, 39, 54, 0.36)),
+        linear-gradient(135deg, #89cff0, #255f85);
+}
+
+.car-card-art-two {
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35)),
+        linear-gradient(135deg, #8d2020, #23151f);
+}
+
+.car-card-art-three {
+    background:
+        linear-gradient(180deg, rgba(44, 58, 58, 0.06), rgba(44, 58, 58, 0.24)),
+        linear-gradient(135deg, #b8c9b0, #5d7360);
+}
+
+.car-card-art-four {
+    background:
+        linear-gradient(180deg, rgba(12, 15, 28, 0.08), rgba(12, 15, 28, 0.32)),
+        linear-gradient(135deg, #d5c4ff, #5853b6);
+}
+
+.car-tag,
+.car-price {
+    font-weight: 700;
+}
+
+.car-card-copy h3,
+.why-us-card h3 {
+    margin: 8px 0;
+}
+
+.car-card-copy ul,
+.spotlight-specs {
+    display: grid;
+    gap: 8px;
+}
+
+.car-card-copy ul {
+    padding-left: 18px;
+    margin: 18px 0 0;
+}
+
+.car-card.is-hidden {
+    display: none;
+}
+
+.why-us-card {
+    min-height: 180px;
+}
+
+.finance-section,
+.contact-section {
+    align-items: start;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 32px;
+    background: rgba(255, 250, 244, 0.78);
+    box-shadow: var(--shadow);
+}
+
+.finance-copy {
+    grid-column: span 1;
+}
+
+.finance-calculator,
+.contact-form {
+    display: grid;
+    gap: 16px;
+}
+
+.finance-calculator {
+    grid-column: span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.finance-calculator label,
+.contact-form label {
+    display: grid;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.finance-calculator input,
+.finance-calculator select,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.86);
+}
+
+.payment-output {
+    display: grid;
+    gap: 8px;
+    align-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(17, 124, 122, 0.12), rgba(207, 92, 54, 0.14));
+}
+
+.payment-output strong {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-copy,
+.spotlight-card,
+.feature-strip article,
+.car-card,
+.why-us-card,
+.finance-section,
+.contact-section {
+    animation: rise-in 700ms ease both;
+}
+
+.feature-strip article:nth-child(2),
+.car-card:nth-child(2),
+.why-us-card:nth-child(2) {
+    animation-delay: 90ms;
+}
+
+.feature-strip article:nth-child(3),
+.car-card:nth-child(3),
+.why-us-card:nth-child(3),
+.car-card:nth-child(4) {
+    animation-delay: 160ms;
+}
+
+@media (max-width: 960px) {
+    .topbar,
+    .hero-grid,
+    .section-heading,
+    .feature-strip,
+    .inventory-grid,
+    .why-us-grid,
+    .finance-section,
+    .contact-section,
+    .finance-calculator {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        min-height: 420px;
+    }
+
+    .spotlight-card {
+        margin: 80px 0 0;
+    }
+
+    .finance-calculator,
+    .contact-form {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        width: min(100% - 20px, 1180px);
+        margin: 10px auto 24px;
+    }
+
+    .hero,
+    .inventory-section,
+    .why-us-section,
+    .finance-section,
+    .contact-section {
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.8rem, 16vw, 4rem);
+    }
+
+    .button,
+    .filter-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
